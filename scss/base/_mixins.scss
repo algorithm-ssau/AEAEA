@@ -1,0 +1,21 @@
+@use './vars' as *;
+@mixin mediaSquare {
+	 @media screen and (max-width:$size-square){
+        @content;
+    }
+}
+@mixin mediaLaptop {
+	 @media screen and (max-width:$size-laptop){
+        @content;
+    }
+}
+@mixin mediaTablet {
+	 @media screen and (max-width:$size-tablet){
+        @content;
+    }
+}
+@mixin mediaMobile {
+	 @media screen and (max-width:$size-mobile){
+        @content;
+    }
+}

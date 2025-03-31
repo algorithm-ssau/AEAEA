@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import {Alumni_Sans } from "next/font/google";
-import "./globals.scss";
+import "@/scss/globals.scss";
 
-import { Montserrat } from 'next/font/google'
-import { cn } from "./utils/utils";
+import { cn } from "../utils/utils";
 
 const alumni  = Alumni_Sans({
 	subsets: ['cyrillic'],
