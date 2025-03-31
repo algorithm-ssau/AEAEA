@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import {Alumni_Sans } from "next/font/google";
 import "@/scss/globals.scss";
 
-import { cn } from "../utils/utils";
 
 const alumni  = Alumni_Sans({
 	subsets: ['cyrillic'],
@@ -22,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
 			<body className={`${alumni.className}`}>
-				<div className={cn('relative min-h-full flex flex-col z-1')} >
+				<div className='wrapper' >
 					{children}
 				</div>
 			</body>
