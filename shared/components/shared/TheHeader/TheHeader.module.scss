@@ -1,0 +1,31 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+
+.header {
+    height: 100px;
+    background-color: $color-black;
+}
+.inner {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+.navigationList {
+    display: flex;
+    gap: 45px;
+}
+.link,
+.contacts {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    text-align: center;
+    color: $color-white;
+    cursor: pointer;
+    font-family: var(--font-montserrat);
+}
+.contacts{
+    margin-left: 145px;
+}

@@ -1,17 +1,19 @@
-import type { Metadata } from 'next'
+import { TheHeader } from "@/shared/components/shared/TheHeader";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: 'Главная',
-}
+    title: "Главная",
+};
 
 export default function RootLayout({
-	children,
+    children,
 }: Readonly<{
-	children: React.ReactNode
+    children: React.ReactNode;
 }>) {
-	return (
-		<>
-			<main>{children}</main>
-		</>
-	)
+    return (
+        <>
+            <TheHeader />
+            <main>{children}</main>
+        </>
+    );
 }
