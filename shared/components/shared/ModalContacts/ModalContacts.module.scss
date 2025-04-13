@@ -1,0 +1,24 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+.inner{
+    
+    width: 522px;
+    background-color: $color-black;
+    padding: 20px;
+    max-height: calc(100vh - 100px);
+    margin: 50px 0;
+   
+    @include mediaMobile {
+		width: 360px;
+	}
+}

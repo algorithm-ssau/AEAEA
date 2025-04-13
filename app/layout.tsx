@@ -5,7 +5,7 @@ import "@/scss/globals.scss";
 
 const alumni  = Alumni_Sans({
 	subsets: ['cyrillic'],
-	variable: '--font-alumni ',
+	variable: '--font-alumni',
 })
 const montserrat = Montserrat({
 	subsets: ['cyrillic'],
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-			<body className={`${alumni.className} ${montserrat.className}`}>
+			<body className={`${alumni.variable} ${montserrat.variable}`}>
 				<div className='wrapper' >
 					{children}
 				</div>

@@ -2,9 +2,13 @@
 $color-black: rgb(0, 0, 0);
 $color-white: #fff;
 
-
 //sizes
 $size-square: 1424px;
 $size-laptop: 1000px;
 $size-tablet: 720px;
 $size-mobile: 600px;
+
+.wrapper {
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-alumni: "Alumni Sans", "Alumni Sans Fallback";
+}

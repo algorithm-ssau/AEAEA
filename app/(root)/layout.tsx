@@ -1,3 +1,4 @@
+import { TheFooter } from "@/shared/components/shared/TheFooter";
 import { TheHeader } from "@/shared/components/shared/TheHeader";
 import type { Metadata } from "next";
 
@@ -14,6 +15,7 @@ export default function RootLayout({
         <>
             <TheHeader />
             <main>{children}</main>
+            <TheFooter/>
         </>
     );
 }

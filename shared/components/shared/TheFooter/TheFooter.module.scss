@@ -1,0 +1,47 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.footer {
+    padding: 140px 0;
+    background-color: $color-black;
+}
+.inner {
+    display: flex;
+    max-width: 1035px;
+    justify-content: space-between;
+    gap: 30px;
+    
+}
+.title {
+    color: $color-white;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 120%;
+    // font-family: var(--font-montserrat);
+    font-family: var(--font-alumni);
+}
+.element{
+    color: $color-white;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 125%;
+    font-family: var(--font-montserrat);
+}
+.navigation{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &:first-child{
+        margin-right: 60px;
+    }
+    &:last-child{
+        margin-left: 0px;
+    }
+}
+.shop_link{
+    margin-top: 20px;
+    text-decoration: underline;
+}
+.socials_block{
+    display: flex;
+    gap: 35px;
+}
