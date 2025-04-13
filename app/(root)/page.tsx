@@ -1,7 +1,9 @@
+import IndexPage from "@/pages/IndexPage/IndexPage";
+
 export default function Home() {
     return (
-        <>
-            <div className="container"></div>
-        </>
+        
+            <IndexPage />
+        
     );
 }

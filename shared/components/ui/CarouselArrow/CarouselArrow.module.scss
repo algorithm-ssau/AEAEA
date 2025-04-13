@@ -1,0 +1,33 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.arrow {
+    height: 100%;
+    width: clamp(40px, 10vw, 100px);
+    background: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    @media (hover: hover) {
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.54);
+            transition: 0.3s ease-in-out;
+        }
+    }
+    @media (hover: none) {
+        &:active {
+            box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.24);
+            transition: 0.3s ease-in-out;
+        }
+    }
+    &.prev {
+        left: 0px;
+    }
+    &.next {
+        right: 0px;
+        img{
+            transform: rotateY(180deg);
+        }
+    }
+}
