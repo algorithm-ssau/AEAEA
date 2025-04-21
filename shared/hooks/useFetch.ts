@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import $api from "@/http";
 import { AxiosResponse } from "axios";
 function useFetch(url:string, flag:boolean) {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<any>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
