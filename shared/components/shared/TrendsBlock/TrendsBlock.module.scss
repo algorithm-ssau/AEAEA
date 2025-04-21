@@ -16,12 +16,17 @@
     margin-bottom: 50px;
 }
 .list {
-    display: flex;
+    display:grid;
+    grid-template-columns:  repeat(4,1fr);
+    @include mediaLaptop{
+        grid-template-columns:  repeat(3,1fr);
+    }
     justify-content: space-between;
     gap: 20px;
 }
 .element {
-
+    max-width: 315px;
+    max-height: 500px;
 }
 .image_block {
     max-width: 315px;
@@ -62,4 +67,9 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     
+}
+
+.slider {
+	width: 100%;
+	height: 600px;
 }
