@@ -1,0 +1,22 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.inner {
+    margin-top: 10px;
+    padding: 20px 40px;
+    background-color: $color-black;
+    border: solid 1px $color-white;
+    border-radius: 10px;
+    color: $color-white;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.link {
+    font-family: var(--font-montserrat);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+}
