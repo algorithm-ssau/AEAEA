@@ -27,6 +27,8 @@ body {
     font-size: 18px;
     font-weight: 500;
     line-height: 130%;
+    color: $color-white;
+    font-family: var(--font-montserrat);
 }
 html {
     scroll-behavior: smooth;
