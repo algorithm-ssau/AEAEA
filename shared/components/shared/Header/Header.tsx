@@ -32,7 +32,7 @@ const Header: React.FC = () => {
                         </button>
                     </nav>
                     <AboutPopover  setAnchorEl={setAnchorEl} anchorEl={anchorEl}/>
-                    <Link href={"#"}>
+                    <Link href={"/"}>
                         <Image width={103} height={64} alt="logo" src={logo} />
                     </Link>
                     <button
