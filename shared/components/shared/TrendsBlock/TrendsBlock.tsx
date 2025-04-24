@@ -1,7 +1,7 @@
 "use client";
 import useFetch from "@/shared/hooks/useFetch";
 import styles from "./TrendsBlock.module.scss";
-import 'swiper/swiper-bundle.css'
+import "swiper/swiper-bundle.css";
 
 import useWindowSize from "@/shared/hooks/useWindowSize";
 import { Swiper, SwiperSlide } from "swiper/react";

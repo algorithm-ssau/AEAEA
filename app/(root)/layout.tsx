@@ -1,5 +1,5 @@
-import { TheFooter } from "@/shared/components/shared/TheFooter";
-import { TheHeader } from "@/shared/components/shared/TheHeader";
+import {Footer } from "@/shared/components/shared/Footer";
+import { Header } from "@/shared/components/shared/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,9 +13,9 @@ export default function RootLayout({
 }>) {
     return (
         <>
-            <TheHeader />
+            <Header />
             <main>{children}</main>
-            <TheFooter/>
+            <Footer/>
         </>
     );
 }

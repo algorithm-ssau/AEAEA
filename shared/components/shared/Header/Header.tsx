@@ -1,5 +1,5 @@
 'use client'
-import styles from "./TheHeader.module.scss";
+import styles from "./Header.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,7 +7,7 @@ import logo from "@/public/images/logo.svg";
 import { useState } from "react";
 import { ModalContacts } from "../ModalContacts";
 
-const TheHeader: React.FC = () => {
+const Header: React.FC = () => {
     const [open, setOpen] = useState<boolean>(false);
     const handleOpenModal = () => {
         setOpen(true);
@@ -39,4 +39,4 @@ const TheHeader: React.FC = () => {
         </header>
     );
 };
-export { TheHeader };
+export { Header };

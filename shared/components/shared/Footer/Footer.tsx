@@ -1,11 +1,11 @@
 import Link from "next/link";
-import styles from "./TheFooter.module.scss";
+import styles from "./Footer.module.scss";
 
 import vk from "@/public/images/vk.svg";
 import telegram from "@/public/images/tg.svg";
 import rutube from "@/public/images/rutube.svg";
 import Image from "next/image";
-const TheFooter: React.FC = () => {
+const Footer: React.FC = () => {
     const services = [
         { title: "Фейерверки" },
         { title: "Дымы" },
@@ -116,4 +116,4 @@ const TheFooter: React.FC = () => {
         </footer>
     );
 };
-export { TheFooter };
+export { Footer };
