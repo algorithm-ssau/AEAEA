@@ -1,6 +1,6 @@
 import IndexPage from "@/pages/IndexPage/IndexPage";
 
-export default function Home() {
+export default function Page() {
     return (
         <>
             <IndexPage />

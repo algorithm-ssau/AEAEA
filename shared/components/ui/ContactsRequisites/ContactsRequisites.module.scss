@@ -2,16 +2,14 @@
 @import "@/scss/base/vars";
 .requisites {
     max-width: 770px;
-    margin: 0 auto;
-    padding: 40px 20px;
 
     .title {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         font-family: var(--font-alumni);
         font-style: normal;
         font-weight: 500;
         font-size: 96px;
-        line-height: 100%;
+        line-height: 80%;
         display: flex;
         align-items: center;
 

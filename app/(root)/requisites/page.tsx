@@ -1,15 +1,5 @@
-import { ContactsRequisites } from "@/shared/components/ui/ContactsRequisites";
+import RequisitesPage from "@/pages/RequisitesPage/RequisitesPage";
 
-export default function RequisitesPage() {
-    return (
-        <div className="container">
-            <nav>
-                <ul>
-                    
-                </ul>
-            </nav>
-            <ContactsRequisites />
-        </div>
-    );
+export default function Page() {
+    return <RequisitesPage />;
 }
-export { RequisitesPage };

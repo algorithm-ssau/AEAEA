@@ -1,0 +1,8 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+
+.inner{
+    display: flex;
+    padding-top: 15px;
+    gap: 230px;
+}

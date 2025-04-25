@@ -27,6 +27,7 @@ const aboutNavigationArray = [
         href: "/requisites",
     },
 ];
+
 const AboutNavigation: React.FC<aboutNavigationProps> = ({ active }) => {
     return (
         <nav>
