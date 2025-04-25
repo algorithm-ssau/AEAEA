@@ -1,0 +1,156 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.requisites {
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    .title {
+        margin-bottom: 20px;
+        font-family: var(--font-alumni);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 96px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+
+        color: $color-white;
+    }
+
+    .requisitesBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .requisiteItem {
+        border-bottom: 1px solid rgba($color-white, 0.5);
+    }
+    .requisite_item_last{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .subtitle {
+        padding: 10px;
+        padding-left: 0;
+        font-family: var(--font-montserrat);
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 120%;
+
+        color: $color-white;
+    }
+    .last_subtitle{
+        padding: 10px;
+        padding-left: 0;
+        padding-bottom: 0;
+        font-family: var(--font-montserrat);
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 120%;
+
+        color: $color-white;
+    }
+    .text {
+        line-height: 1.5;
+        margin-top: 15px;
+        margin-bottom: 2px;
+        font-family: var(--font-montserrat);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+        color: $color-white;
+        padding-left: 5px;
+    }
+    .last_text{
+        line-height: 1.5;
+        margin-top: 5px;
+        margin-bottom: 2px;
+        font-family: var(--font-montserrat);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        color: $color-white;
+        padding-left: 5px;
+        border-bottom: 1px solid rgba($color-white, 0.5);
+    }
+    .link {
+        color: $color-white;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $color-white;
+            text-decoration: underline;
+        }
+    }
+
+    // Адаптив для планшетов
+    @media (max-width: 768px) {
+        padding: 30px 15px;
+
+        .title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .requisiteItem {
+            padding: 15px;
+        }
+
+        .subtitle {
+            font-size: 17px;
+        }
+
+        .text {
+            font-size: 15px;
+        }
+    }
+
+    // Адаптив для мобильных
+    @media (max-width: 480px) {
+        padding: 20px 10px;
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .requisitesBlock {
+            gap: 15px;
+        }
+
+        .requisiteItem {
+            padding: 12px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+        }
+
+        .text {
+            font-size: 14px;
+        }
+    }
+
+    // Адаптив для очень маленьких экранов
+    @media (max-width: 360px) {
+        .title {
+            font-size: 20px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+        }
+
+        .text {
+            font-size: 13px;
+        }
+    }
+}

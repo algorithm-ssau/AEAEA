@@ -1,0 +1,1 @@
+export {ContactsRequisites} from './ContactsRequisites'
