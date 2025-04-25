@@ -1,0 +1,22 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+.element{
+    padding-bottom: 5px;
+}
+.link {
+    font-family: var(--font-montserrat);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    padding: 2px;
+    color: $color-white;
+    &.active{
+        border-bottom: 1px solid rgba($color-white,0.5);
+    }
+}
