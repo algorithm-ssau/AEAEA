@@ -1,0 +1,14 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.box{
+    display: flex;
+    padding: 40px 0;
+}
+.list{
+    display: flex;
+    gap: 7px;
+} 
+.element{
+    display: flex;
+    gap: 7px;
+}
