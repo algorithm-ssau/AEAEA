@@ -1,6 +1,11 @@
 @import "@/scss/base/mixins";
 @import "@/scss/base/vars";
 
+
+.container{
+    max-width: 1440px;
+    margin: 0px auto;
+}
 .imgBox{
     img{
         // object-fit:scale-down;

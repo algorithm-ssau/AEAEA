@@ -6,6 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import slide from "@/public/images/slide.png";
 import slide2 from "@/public/images/slide2.png";
+import slide3 from "@/public/images/slide3.png";
 
 import { CarouselArrow } from "@/shared/components/ui/CarouselArrow";
 import { CarouselDots } from "@/shared/components/ui/CarouselDots";
@@ -21,12 +22,8 @@ const array = [
     },
     {
         id: 3,
-        imageUrl: slide,
-    },
-    {
-        id: 4,
-        imageUrl: slide2,
-    },
+        imageUrl: slide3,
+    }
 ];
 
 const SliderBlock: React.FC = () => {
