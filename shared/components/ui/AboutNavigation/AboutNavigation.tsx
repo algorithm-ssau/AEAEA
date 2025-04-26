@@ -1,4 +1,4 @@
-import { AboutNavigations } from "@/@types/enums";
+import { AboutNavigations, AboutNavigationsSlugs } from "@/@types/enums";
 import styles from "./AboutNavigation.module.scss";
 import Link from "next/link";
 interface aboutNavigationProps {
@@ -8,23 +8,23 @@ interface aboutNavigationProps {
 const aboutNavigationArray = [
     {
         title: AboutNavigations.ADDRESSES,
-        href: "/addresses",
+        href: `/${AboutNavigationsSlugs.ADDRESSES}`,
     },
     {
         title: AboutNavigations.STAFF,
-        href: "/staff",
+        href: `/${AboutNavigationsSlugs.STAFF}`,
     },
     {
         title: AboutNavigations.SHOPS,
-        href: "/shops",
+        href: `/${AboutNavigationsSlugs.SHOPS}`,
     },
     {
         title: AboutNavigations.LICENSE,
-        href: "/license",
+        href: `/${AboutNavigationsSlugs.LICENSE}`,
     },
     {
         title: AboutNavigations.REQUISITES,
-        href: "/requisites",
+        href: `/${AboutNavigationsSlugs.REQUISITES}`,
     },
 ];
 

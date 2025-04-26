@@ -16,3 +16,12 @@ export enum AboutNavigations {
     LICENSE = "Лицензия",
     REQUISITES = "Реквизиты",
 }
+export enum AboutNavigationsSlugs {
+    ADDRESSES = "addresses",
+    STAFF = "staff",
+    SHOPS = "shops",
+    LICENSE = "license",
+    REQUISITES = "requisites",
+}
+
+
