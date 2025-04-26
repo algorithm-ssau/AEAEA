@@ -6,13 +6,13 @@ import { BreadCrumbs } from "@/shared/components/ui/BreadCrumbs";
 
 export default function RequisitesPage() {
     return (
-        <div className="container">
-            <BreadCrumbs breadCrumbsArray={[{ title: "Реквизиты" }]} />
-            <div className={styles.inner}>
-                <AboutNavigation active={AboutNavigations.REQUISITES} />
+        // <div className="container">
+        //     <BreadCrumbs breadCrumbsArray={[{ title: "Реквизиты" }]} />
+        //     <div className={styles.inner}>
+        //         <AboutNavigation active={AboutNavigations.REQUISITES} />
                 <ContactsRequisites />
-            </div>
-        </div>
+        //     </div>
+        // </div>
     );
 }
 export { RequisitesPage };

@@ -2,7 +2,7 @@
 @import "@/scss/base/vars";
 .requisites {
     max-width: 770px;
-
+    width: 100%;
     .title {
         margin-bottom: 30px;
         font-family: var(--font-alumni);
@@ -64,6 +64,7 @@
         line-height: 100%;
         color: $color-white;
         padding-left: 5px;
+        
     }
     .last_text{
         line-height: 1.5;
