@@ -1,8 +1,6 @@
+import { ShopsPage } from "@/pages/ShopsPage/ShopsPage";
 
 
-export default function ShopsPage(){
-   
-    return (
-        <>shops</>
-    );
-};
+export default function Page() {
+    return <ShopsPage />;
+}
