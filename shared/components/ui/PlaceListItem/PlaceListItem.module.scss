@@ -1,0 +1,36 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+
+.element {
+    display: flex;
+    gap: 10px;
+}
+.title{
+margin-top: 10px;
+margin-bottom: 20px;
+font-family: var(--font-montserrat);
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 100%;
+
+color: $color-white;
+
+
+}
+.index {
+    font-family: var(--font-montserrat);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: $color-white;
+    border-radius: 1000px;
+    border: 1px solid $color-white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
