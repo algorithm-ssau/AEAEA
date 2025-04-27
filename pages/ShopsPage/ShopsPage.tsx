@@ -1,60 +1,63 @@
 import { PlaceListItem } from "@/shared/components/ui/PlaceListItem";
 import styles from "./ShopsPage.module.scss";
 
+import image from '../../public/images/place.jpg'
+
 const array = [
     {
         title: 'ул.Вилоновская, 138"Е"',
         time: "10.00 до 20.00, без выходных",
         tel: "+7(846)922-93-87 (сот.)",
-        image: "",
+        image: image ,
     },
     {
         title: "пл. им Кирова, павильон 21",
         time: "10.00 до 20.00, без выходных",
         tel: "+7(937)202-04-51",
-        image: "",
+        image: image,
     },
     {
         title: "Московское шоссе, д.205/1",
         time: "12:00 до 20:00, Выходной: Понедельник",
         tel: "+7(937)066-94-00",
-        image: "",
+        image: image,
     },
     {
         title: "Московское шоссе 18-й км, д.25А",
         time: "12:00 до 20:00 Выходной: Вторник",
         tel: "+7(927)607-21-15",
-        image: "",
+        image: image,
     },
     {
         title: 'Красноглинское шоссе, 3"Б"',
         time: "10.00 до 20.00, без выходных",
         tel: "+7(927)712-93-89",
-        image: "",
+        image: image,
     },
     {
         title: "ул.Тамбовская, 2 (116 км)",
         time: "Временно не работает",
         tel: "+7(846)989-31-74 (сот.)",
-        image: "",
+        image: image,
     },
 ];
+
 const array2 = [
     {
         title: "проспект Победы, д.36",
         time: "10.00 до 22.00, без выходных",
         tel: "+7(937)062-70-11",
-        image: "",
+        image: image,
     },
     {
         title: 'проспект Победы, д. 1"Ж"',
         time: "10.00 до 22.00, без выходных",
         tel: "+7(995)933-63-63",
-        image: "",
+        image: image,
     },
 ];
 
-const ShopsPage: React.FC = () => {
+export default function ShopsPage(){
     return (
         <div className={styles.inner}>
             <h1 className={styles.title}>ГДЕ НАС НАЙТИ</h1>
@@ -95,4 +98,3 @@ const ShopsPage: React.FC = () => {
         </div>
     );
 };
-export { ShopsPage };
