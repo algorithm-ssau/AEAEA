@@ -4,6 +4,7 @@ import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Image, { StaticImageData } from "next/image";
 
+import close_icon from "../../../../public/images/cross_close.svg";
 interface PlaceListImageModalProps {
     setOpen: (open: boolean) => void;
     open: boolean;
@@ -23,6 +24,17 @@ const PlaceListImageModal: React.FC<PlaceListImageModalProps> = (props) => {
         >
             <Box className={styles.box}>
                 <div className={styles.inner}>
+                    <button
+                        className={styles.button_click}
+                        onClick={() => setOpen(false)}
+                    >
+                        <Image
+                            src={close_icon}
+                            height={30}
+                            width={33}
+                            alt="close"
+                        />
+                    </button>
                     <Image
                         src={image}
                         className={styles.image}
