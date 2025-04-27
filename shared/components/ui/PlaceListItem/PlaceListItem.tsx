@@ -4,7 +4,7 @@ import { PlaceListImageModal } from "../PlaceListImageModal";
 import styles from "./PlaceListItem.module.scss";
 
 import arrow from "@/public/images/link_arrow.svg";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 interface PlaceListItemProps {
     index: number;
     title: string;
@@ -36,7 +36,7 @@ const PlaceListItem: React.FC<PlaceListItemProps> = ({
                     >
                         Как нас найти
                     </button>
-                    <img src={arrow} alt="" />
+                    <Image src={arrow} alt="" />
                 </div>
             </div>
 
