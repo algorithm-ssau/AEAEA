@@ -1,10 +1,14 @@
+"use client";
+import { useState } from "react";
+import { PlaceListImageModal } from "../PlaceListImageModal";
 import styles from "./PlaceListItem.module.scss";
 
 import arrow from "@/public/images/link_arrow.svg";
+import { StaticImageData } from "next/image";
 interface PlaceListItemProps {
     index: number;
     title: string;
-    image: string;
+    image: StaticImageData;
     children: React.ReactNode;
 }
 const PlaceListItem: React.FC<PlaceListItemProps> = ({
@@ -13,6 +17,12 @@ const PlaceListItem: React.FC<PlaceListItemProps> = ({
     image,
     children,
 }) => {
+    const [open, setOpen] = useState<boolean>(false);
+
+    const handleOpenModal = () => {
+        setOpen(true);
+    };
+
     return (
         <li className={styles.element}>
             <div className={styles.index}>{index}</div>
@@ -20,10 +30,17 @@ const PlaceListItem: React.FC<PlaceListItemProps> = ({
                 <h6 className={styles.title}>{title}</h6>
                 {children}
                 <div className={styles.link_block}>
-                    {image && <img src={image} alt="" />}
+                    <button
+                        className={styles.image_button}
+                        onClick={handleOpenModal}
+                    >
+                        Как нас найти
+                    </button>
                     <img src={arrow} alt="" />
                 </div>
             </div>
+
+            <PlaceListImageModal setOpen={setOpen} open={open} image={image} />
         </li>
     );
 };
