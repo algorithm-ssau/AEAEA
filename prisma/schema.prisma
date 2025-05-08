@@ -23,6 +23,30 @@ model User {
   updatedAt DateTime @updatedAt
 }
 
+model Story {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  number   Int
+  title    String
+  imageUrl String
+  objects  StoryObject[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model StoryObject {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  imageUrl String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  Story     Story?   @relation(fields: [storyId], references: [id])
+  storyId   String?  @db.ObjectId
+}
+
 model Trend {
   id String @id @default(auto()) @map("_id") @db.ObjectId
 
@@ -45,7 +69,10 @@ model Service {
   effects     String?
   height      String?
   time        String?
-  gallery     Gallery[]
+
+  gallery Gallery[]
+  events  Event[]
+  type    Filters[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -61,4 +88,37 @@ model Gallery {
 
   Service   Service @relation(fields: [serviceId], references: [id])
   serviceId String  @db.ObjectId
+}
+
+model Event {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Service   Service @relation(fields: [serviceId], references: [id])
+  serviceId String  @db.ObjectId
+}
+
+model Filters {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  items FilterItems[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Service   Service @relation(fields: [serviceId], references: [id])
+  serviceId String  @db.ObjectId
+}
+
+model FilterItems {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Filters   Filters @relation(fields: [filtersId], references: [id])
+  filtersId String  @db.ObjectId
 }
