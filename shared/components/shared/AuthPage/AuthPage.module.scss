@@ -1,0 +1,83 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+
+.inner {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+}
+.block{
+   margin: auto;
+}
+.title {
+    font-family: var(--font-alumni);
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(70px, 10vw,96px );
+    line-height: 130%;
+    text-align: center;
+
+    color: #ffffff;
+}
+.form_block {
+    margin-top: 40px;
+    border: solid 1px $color-white;
+    padding: 55px;
+    padding-bottom: 70px;
+    max-width: 532px;
+    width: 100%;
+}
+.form {
+    gap: 13px;
+    display: flex;
+    flex-direction: column;
+}
+.input_block {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.label {
+    color: $color-white;
+    font-family: var(--font-montserrat);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 110%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+.input {
+    padding: 15px 20px;
+    border: solid 1px $color-white;
+    color: $color-white;
+    font-family: var(--font-montserrat);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: 0%;
+    text-align: left;
+    &::placeholder {
+        color: $color-white;
+        font-family: var(--font-montserrat);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+}
+.submit {
+    width: 100%;
+    background-color: $color-white;
+    color: $color-black;
+    font-family: var(--font-alumni);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
