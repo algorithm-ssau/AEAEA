@@ -1,3 +1,4 @@
+import { ServicesBlock } from "@/shared/components/shared/ServicesBlock";
 import styles from "./IndexPage.module.scss";
 
 import { SliderBlock } from "@/shared/components/shared/SliderBlock";
@@ -7,6 +8,7 @@ export default function IndexPage() {
         <div className={styles.inner}>
             <SliderBlock />
             <TrendsBlock />
+            <ServicesBlock/>
         </div>
     );
 }
