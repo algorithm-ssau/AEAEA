@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 import $api from "@/http";
 import { AxiosResponse } from "axios";

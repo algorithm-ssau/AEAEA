@@ -5,7 +5,6 @@ import { redirect } from "next/navigation";
 
 export default async function DashboardPage() {
     const session = await getUserSession();
-    console.log(session)
     
     if (!session) {
         return redirect("/admin-login");
