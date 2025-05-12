@@ -3,7 +3,7 @@ import styles from "./ShopsPage.module.scss";
 import {
     placesNovokuybyshevskArray,
     placesSamaraArray,
-} from "@/public/arrays/placesArray";
+} from "@/constants/arrays/placesArray";
 
 export default function ShopsPage() {
     return (

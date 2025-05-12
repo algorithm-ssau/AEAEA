@@ -13,19 +13,19 @@
     align-items: start;
 
     color: $color-white;
-    margin-bottom: 50px;
 }
 .list {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
 .element {
     position: relative;
     width: 200px;
     height: 600px;
-    transition: width 0.2s ease-out;
+    transition: width 0.3s ease-out;
     &.active {
-        transition: width 0.2s ease-out;
+        transition: width 0.3s ease-out;
         width: 655px;
     }
     overflow: hidden;
@@ -52,10 +52,13 @@
 }
 .withoutTitle {
     opacity: 0;
-    transition: opacity 0.15s ease-out;
+    width: 540px;
+    transition: all 0.15s ease-out;
+    margin-bottom: 0px;
     &.active {
+        margin-bottom: 40px;
         opacity: 1;
-        transition: opacity 0.15s ease-out;
+        transition: all 0.15s ease-out;
     }
 }
 .title {
@@ -86,4 +89,23 @@
 
     color: $color-white;
     text-decoration: underline;
+}
+.componentSubtitle {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+
+    color: $color-white;
+}
+.upperBlock {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+.titles{
+    width: 570px;
+    
 }

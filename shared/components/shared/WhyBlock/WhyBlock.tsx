@@ -1,44 +1,9 @@
 "use client";
+
 import styles from "./WhyBlock.module.scss";
-
-import image1 from "@/public/images/whyImage1.png";
-import image2 from "@/public/images/whyImage2.png";
-import image3 from "@/public/images/whyImage3.png";
-import image4 from "@/public/images/whyImage4.png";
-
+import { whyAreWeArray } from "@/constants/arrays/whyAreWeArray";
 import Link from "next/link";
 import { useRef, useState } from "react";
-
-const array = [
-    {
-        image: image1,
-        title: "ГОРОДСКИЕ САЛЮТЫ",
-        description:
-            "Наша команда организует фейерверки на День города, 9 мая и другие праздники в городе Самара.",
-        link: "",
-    },
-    {
-        image: image2,
-        title: "ФЕСТИВАЛИ",
-        description:
-            "Пиротеатр участвовал в фестивалях «Большая Волга», «Серебряная ладья», «Сталинградская сирень».",
-        link: "",
-    },
-    {
-        image: image3,
-        title: "КОНЦЕРТЫ",
-        description:
-            "Наши специалисты устанавливали спецэффекты на концертах группы Dabro, BigBaby Tape, Feduk и др.",
-        link: "",
-    },
-    {
-        image: image4,
-        title: "СВАДЬБЫ",
-        description:
-            "Мы предоставляем широкий ассортимент услуг для свадеб - от тяжелого дыма до высотного фейерверка.",
-        link: "",
-    },
-];
 
 const WhyBlock: React.FC = () => {
     const [active, setActive] = useState(0);
@@ -47,9 +12,27 @@ const WhyBlock: React.FC = () => {
     return (
         <div className="container">
             <div className={styles.inner}>
-                <h3 className={styles.component_title}>ПОЧЕМУ МЫ?</h3>
+                <div className={styles.upperBlock}>
+                    <div className={styles.titles}>
+                        <h3 className={styles.component_title}>ПОЧЕМУ МЫ?</h3>
+                        <p className={styles.componentSubtitle}>
+                            Мы создаем незабываемые мероприятия самого высокого
+                            уровня!
+                        </p>
+                    </div>
+                    <div>
+                        <p className={styles.component_title}>30+</p>
+                        <p className={styles.componentSubtitle}>лет на рынке</p>
+                    </div>
+                    <div>
+                        <p className={styles.component_title}>4 500+</p>
+                        <p className={styles.componentSubtitle}>
+                            проведенных мероприятий
+                        </p>
+                    </div>
+                </div>
                 <ul className={styles.list}>
-                    {array.map((element, index) => (
+                    {whyAreWeArray.map((element, index) => (
                         <li
                             onMouseEnter={() => {
                                 setActive(index);
@@ -66,11 +49,13 @@ const WhyBlock: React.FC = () => {
                                 alt=""
                             />
                             <div className={styles.textBlock}>
-                                <h6 className={`${styles.title}${
+                                <h6
+                                    className={`${styles.title}${
                                         active === index
                                             ? " " + styles.active
                                             : ""
-                                    }`}>
+                                    }`}
+                                >
                                     {element.title}
                                 </h6>
                                 <div
