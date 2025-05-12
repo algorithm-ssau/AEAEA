@@ -11,7 +11,8 @@ interface TrendsBlockProps {}
 const TrendsBlock: React.FC<TrendsBlockProps> = () => {
     const { data, loading, error } = useFetch("trends", true);
     const [activeIndex, setActiveIndex] = useState(1);
-
+    console.log(data?data:'')
+    
     const handleClick = () => {};
     const width = useWindowSize();
 
@@ -33,7 +34,7 @@ const TrendsBlock: React.FC<TrendsBlockProps> = () => {
                                 >
                                     <div className={styles.image_block}>
                                         <img
-                                            src={element.url}
+                                            src={element.imageUrl}
                                             alt={""}
                                             className={styles.image}
                                         />
