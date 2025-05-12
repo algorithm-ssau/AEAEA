@@ -1,30 +1,31 @@
 "use client";
-import useFetch from "@/shared/hooks/useFetch";
+import { servicesArray } from "@/constants/arrays/servicesArray";
 import styles from "./ServicesBlock.module.scss";
 import Link from "next/link";
 
 const ServicesBlock: React.FC = () => {
-    const { data, loading, error } = useFetch("trends", true);
     return (
         <div className="container">
             <div className={styles.inner}>
                 <h3 className={styles.component_title}>
                     ЗАПУСТИМ ВАШИ ДЕНЬГИ КРАСИВО!
                 </h3>
-                {!data || loading || error ? (
-                    //TODO сделать склетоны
-                    <></>
-                ) : (
-                    <ul className={styles.list}>
-                        {data.map((element: any, index: number) => (
-                            <li className={styles.element} key={element.url}>
+                <ul className={styles.list}>
+                    {servicesArray.map(
+                        (element: (typeof servicesArray)[0], index: number) => (
+                            <li
+                                className={styles.element}
+                                key={element.url.src}
+                            >
                                 <img
-                                    src={element.url}
+                                    src={element.url.src}
                                     alt="изображение"
                                     className={styles.bgImage}
                                 />
                                 <div className={styles.textBlock}>
-                                    <h6 className={styles.title}>{element.title}</h6>
+                                    <h6 className={styles.title}>
+                                        {element.title}
+                                    </h6>
                                     <Link
                                         href="/idgaf"
                                         className={styles.moreLink}
@@ -33,9 +34,9 @@ const ServicesBlock: React.FC = () => {
                                     </Link>
                                 </div>
                             </li>
-                        ))}
-                    </ul>
-                )}
+                        )
+                    )}
+                </ul>
             </div>
         </div>
     );
