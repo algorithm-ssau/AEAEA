@@ -14,7 +14,6 @@ interface ElementProps {
     element: Filters & { items: FilterItems[] };
 }
 const FilterElement: React.FC<ElementProps> = ({ element }) => {
-    const { filters } = useReduxStates();
     const { addServices } = useActions();
 
     const [active, setActive] = useState<{ title: string; id: string } | null>(

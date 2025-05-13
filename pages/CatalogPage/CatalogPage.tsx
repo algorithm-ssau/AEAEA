@@ -1,14 +1,16 @@
 import { BreadCrumbs } from "@/shared/components/ui/BreadCrumbs";
 import styles from "./CatalogPage.module.scss";
-import { FilterItems, Filters } from "@prisma/client";
+import { Event, FilterItems, Filters } from "@prisma/client";
 
 import { FilterElement } from "@/shared/components/ui/FilterElement";
+import { EventsBlock } from "@/shared/components/shared/EventsBlock";
 
 type Props = {
     services: (Filters & { items: FilterItems[] })[];
+    events: Event[];
 };
 
-const CatalogPage: React.FC<Props> = ({ services }) => {
+const CatalogPage: React.FC<Props> = ({ services, events }) => {
     return (
         <>
             <BreadCrumbs breadCrumbsArray={[{ title: "Услуги" }]} />
@@ -26,12 +28,10 @@ const CatalogPage: React.FC<Props> = ({ services }) => {
                     </nav>
                 </div>
                 <div className={styles.rightBlock}>
-                    
+                    <EventsBlock events={events} />
                 </div>
             </div>
         </>
     );
 };
 export { CatalogPage };
-
-

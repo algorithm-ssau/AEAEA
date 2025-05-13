@@ -1,22 +1,11 @@
 import { getAllFilters } from "@/services/filters";
+import { FilterItems, Filters } from "@prisma/client";
 
 import { NextResponse } from "next/server";
 
-type Filters = {
-    items: {
-        id: string;
-        createdAt: Date;
-        updatedAt: Date;
-        filtersId: string;
-    }[];
+type FiltersProp = Filters & { items: FilterItems[] };
 
-    id: string;
-    createdAt: Date;
-    updatedAt: Date;
-    serviceId: string;
-};
-
-export async function GET(): Promise<NextResponse<Filters[]>> {
+export async function GET(): Promise<NextResponse<FiltersProp[]>> {
     const trends = await getAllFilters();
     return NextResponse.json(trends);
 }

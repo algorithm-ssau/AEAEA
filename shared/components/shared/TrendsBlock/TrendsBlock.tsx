@@ -11,7 +11,6 @@ interface TrendsBlockProps {}
 const TrendsBlock: React.FC<TrendsBlockProps> = () => {
     const { data, loading, error } = useFetch("trends", true);
     const [activeIndex, setActiveIndex] = useState(1);
-    console.log(data?data:'')
     
     const handleClick = () => {};
     const width = useWindowSize();

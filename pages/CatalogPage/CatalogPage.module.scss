@@ -4,6 +4,11 @@
     max-width: 252px;
     width: 100%;
 }
+.inner{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
 .title {
     font-family: var(--font-alumni);
     font-style: normal;
