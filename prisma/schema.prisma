@@ -42,9 +42,9 @@ model StoryObject {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  
-  Story     Story?   @relation(fields: [storyId], references: [id])
-  storyId   String?  @db.ObjectId
+
+  Story   Story?  @relation(fields: [storyId], references: [id])
+  storyId String? @db.ObjectId
 }
 
 model Trend {
@@ -86,8 +86,8 @@ model Gallery {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  Service   Service @relation(fields: [serviceId], references: [id])
-  serviceId String  @db.ObjectId
+  Service   Service? @relation(fields: [serviceId], references: [id])
+  serviceId String?  @db.ObjectId
 }
 
 model Event {
@@ -105,20 +105,23 @@ model Filters {
   id String @id @default(auto()) @map("_id") @db.ObjectId
 
   items FilterItems[]
+  title String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  Service   Service @relation(fields: [serviceId], references: [id])
-  serviceId String  @db.ObjectId
+  Service   Service? @relation(fields: [serviceId], references: [id])
+  serviceId String?  @db.ObjectId
 }
 
 model FilterItems {
   id String @id @default(auto()) @map("_id") @db.ObjectId
 
+  title String
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  Filters   Filters @relation(fields: [filtersId], references: [id])
-  filtersId String  @db.ObjectId
+  Filters   Filters? @relation(fields: [filtersId], references: [id])
+  filtersId String?  @db.ObjectId
 }

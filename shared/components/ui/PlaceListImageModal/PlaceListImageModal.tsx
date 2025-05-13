@@ -3,7 +3,6 @@ import styles from "./PlaceListImageModal.module.scss";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import Image, { StaticImageData } from "next/image";
-
 import close_icon from "@/public/images/cross_close.svg";
 interface PlaceListImageModalProps {
     setOpen: (open: boolean) => void;

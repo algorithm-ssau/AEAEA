@@ -1,0 +1,82 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.block {
+    border-bottom: 1px solid $color-white;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+}
+.filterButton {
+    font-family: var(--font-alumni);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 130%;
+
+    color: $color-white;
+}
+.title_block {
+    cursor: pointer;
+    display: flex;
+    padding: 0 !important;
+
+    span {
+        margin: 0 !important;
+        display: flex;
+    }
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.openButton {
+    margin: auto;
+    margin-right: 0;
+    span {
+        width: 24px;
+        height: 1px;
+        display: block;
+        background-color: $color-white;
+        &:first-child {
+            transform: rotate(90deg);
+            transform-origin: 50%;
+            opacity:1;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+    &.active {
+        span {
+            &:first-child {
+                transform: rotate(0deg);
+                transform-origin: 50%;
+                opacity:0;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}
+.list {
+    padding: 0 0 15px 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.item {
+    cursor: pointer;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    p {
+        font-family: var(--font-montserrat);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+
+        color: $color-white;
+    }
+}
+.toggleImage {
+    width: 16px;
+    height: 16px;
+}

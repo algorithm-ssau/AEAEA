@@ -1,4 +1,4 @@
 import { prisma } from "@/lib/prisma";
-export function getAllEvents() {
+export function getAllTrends() {
     return prisma.trend.findMany({});
 }

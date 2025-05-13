@@ -1,4 +1,4 @@
-import { getAllEvents } from "@/services/trends";
+import { getAllTrends } from "@/services/trends";
 import { NextResponse } from "next/server";
 
 type Trend = {
@@ -11,6 +11,6 @@ type Trend = {
 };
 
 export async function GET(): Promise<NextResponse<Trend[]>> {
-    const trends = await getAllEvents();
+    const trends = await getAllTrends();
     return NextResponse.json(trends);
 }

@@ -1,0 +1,18 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.leftBlock {
+    max-width: 252px;
+    width: 100%;
+}
+.title {
+    font-family: var(--font-alumni);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 110%;
+    margin-bottom: 20px;
+    color: $color-white;
+}
+
+
+
