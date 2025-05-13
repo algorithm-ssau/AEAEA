@@ -26,10 +26,10 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${alumni.variable} ${montserrat.variable}`}>
                 <div className="wrapper">
-                    {/* <ReduxProvider> */}
+                    <ReduxProvider>
 						{children}
 
-					{/* </ReduxProvider> */}
+					</ReduxProvider>
                 </div>
             </body>
         </html>

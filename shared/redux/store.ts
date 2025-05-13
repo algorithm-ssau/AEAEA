@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-
+import services from "./slices/services.slice";
 import {
     persistStore,
     persistReducer,
@@ -13,7 +13,7 @@ import {
 import storage from "redux-persist/lib/storage";
 
 const rootReducer = combineReducers({
-    
+    filters:services
 });
 
 const persistConfig = {

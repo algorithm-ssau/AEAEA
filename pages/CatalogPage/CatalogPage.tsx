@@ -25,6 +25,9 @@ const CatalogPage: React.FC<Props> = ({ services }) => {
                         </ul>
                     </nav>
                 </div>
+                <div className={styles.rightBlock}>
+                    
+                </div>
             </div>
         </>
     );

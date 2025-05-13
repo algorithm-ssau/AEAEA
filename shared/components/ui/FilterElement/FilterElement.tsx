@@ -7,21 +7,39 @@ import Image from "next/image";
 import { useState } from "react";
 import Accordion from "@mui/material/Accordion";
 import { AccordionDetails, AccordionSummary } from "@mui/material";
+import { useReduxStates } from "@/shared/redux/hooks/useReduxStates";
+import { useActions } from "@/shared/redux/hooks/useActions";
 
 interface ElementProps {
     element: Filters & { items: FilterItems[] };
 }
 const FilterElement: React.FC<ElementProps> = ({ element }) => {
+    const { filters } = useReduxStates();
+    const { addServices } = useActions();
+
     const [active, setActive] = useState<{ title: string; id: string } | null>(
         null
     );
     const [expanded, setExpanded] = useState(false);
 
-    const onClickFilterItems = (element: FilterItems | null) => {
-        if (element) {
-            setActive({ title: element.title, id: element.id });
+    const onClickFilterItems = (item: FilterItems | null) => {
+        if (item) {
+            setActive({ title: item.title, id: item.id });
+            addServices({
+                service: {
+                    title: element.title,
+                    id: element.id,
+                },
+                item: item,
+            });
+           
         } else {
-            setActive(null);
+            setActive(null); 
+            addServices({service: {
+                    title: element.title,
+                    id: element.id,
+                },
+                item: null,});           
         }
     };
     return (
