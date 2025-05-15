@@ -10,8 +10,8 @@ type Props = {
     services: (Filters & { items: FilterItems[] })[];
     events: Event[];
 };
-
-const CatalogPage: React.FC<Props> = ({ services, events }) => {
+export default  function CatalogPage ({ services, events }:Props) {
+    if(services &&events)
     return (
         <>
             <BreadCrumbs breadCrumbsArray={[{ title: "Услуги" }]} />
@@ -35,5 +35,8 @@ const CatalogPage: React.FC<Props> = ({ services, events }) => {
             </div>
         </>
     );
+    else{
+        return <></>
+    }
 };
 export { CatalogPage };
