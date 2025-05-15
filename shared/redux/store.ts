@@ -1,6 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import services from "./slices/services.slice";
+import filters from "./slices/filters.slice";
 import events from "./slices/events.slice";
+import services from "./slices/services.slice";
 import {
     persistStore,
     persistReducer,
@@ -14,8 +15,9 @@ import {
 import storage from "redux-persist/lib/storage";
 
 const rootReducer = combineReducers({
-    filters:services,
-    events:events
+    filters:filters,
+    events:events,
+    services:services
 });
 
 const persistConfig = {

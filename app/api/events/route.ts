@@ -6,7 +6,7 @@ type Events = {
     title: string;
     createdAt: Date;
     updatedAt: Date;
-    serviceId: string;
+    serviceId: string | null;
 };
 export async function GET(): Promise<NextResponse<Events[]>> {
     const trends = await getAllEvents();

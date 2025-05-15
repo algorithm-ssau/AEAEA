@@ -4,6 +4,7 @@ import { Event, FilterItems, Filters } from "@prisma/client";
 
 import { FilterElement } from "@/shared/components/ui/FilterElement";
 import { EventsBlock } from "@/shared/components/shared/EventsBlock";
+import { ServicesesList } from "@/shared/components/shared/ServicesesList/ServicesesList";
 
 type Props = {
     services: (Filters & { items: FilterItems[] })[];
@@ -29,6 +30,7 @@ const CatalogPage: React.FC<Props> = ({ services, events }) => {
                 </div>
                 <div className={styles.rightBlock}>
                     <EventsBlock events={events} />
+                    <ServicesesList/>
                 </div>
             </div>
         </>
