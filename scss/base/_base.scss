@@ -47,18 +47,18 @@ body,
     background-color: $color-black;
 }
 main {
-    &:hover{
-        animation: spin 4.5s infinite;
-    }
+    // &:hover{
+        // animation: spin 4.5s infinite;
+    // }
     min-height: 280px;
     flex-grow: 1;
     position: relative;
     
 }
 *{
-    &:hover{
+    // &:hover{
         animation: spin 4.5s infinite;
-    }
+    // }
 }
 .container {
     max-width: 1488px;
