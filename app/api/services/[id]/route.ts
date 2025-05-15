@@ -6,9 +6,9 @@ export async function GET(
     request: Request
 ): Promise<NextResponse<Service | { error: string }>> {
     try {
-        const { searchParams } = new URL(request.url);
-        const id = searchParams.get("id");
-        
+        const url:string = request.url;
+        const id =url.split('/').at(-1)
+        console.log(id,request)
         if (!id) {
             return NextResponse.json(
                 { error: "ID parameter is required" },

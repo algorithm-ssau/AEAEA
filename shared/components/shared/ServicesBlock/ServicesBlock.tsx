@@ -27,7 +27,7 @@ const ServicesBlock: React.FC = () => {
                                         {element.title}
                                     </h6>
                                     <Link
-                                        href="/idgaf"
+                                        href="/catalog"
                                         className={styles.moreLink}
                                     >
                                         Подробнее
