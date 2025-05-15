@@ -25,7 +25,7 @@ const FilterElement: React.FC<ElementProps> = ({ element }) => {
         if (item) {
             setActive({ title: item.title, id: item.id });
             addServices({
-                service: {
+                filter: {
                     title: element.title,
                     id: element.id,
                 },
@@ -34,7 +34,7 @@ const FilterElement: React.FC<ElementProps> = ({ element }) => {
            
         } else {
             setActive(null); 
-            addServices({service: {
+            addServices({filter: {
                     title: element.title,
                     id: element.id,
                 },

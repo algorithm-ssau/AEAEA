@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Alumni_Sans, Montserrat } from "next/font/google";
 import "@/scss/globals.scss";
 import ReduxProvider from "@/shared/redux/ReduxProvider/ReduxProvider";
+import { Suspense } from "react";
 
 const alumni = Alumni_Sans({
     subsets: ["cyrillic"],
@@ -25,12 +26,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${alumni.variable} ${montserrat.variable}`}>
-                <div className="wrapper">
-                    <ReduxProvider>
-						{children}
-
-					</ReduxProvider>
-                </div>
+                <Suspense>
+                    <div className="wrapper">
+                        <ReduxProvider>{children}</ReduxProvider>
+                    </div>
+                </Suspense>
             </body>
         </html>
     );

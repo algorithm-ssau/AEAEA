@@ -1,18 +1,35 @@
-import { getAllServices, getServiceById } from "@/services/services";
+import { getServiceById } from "@/services/services";
 import { Service } from "@prisma/client";
 import { NextResponse } from "next/server";
 
-
-
 export async function GET(
     request: Request
-): Promise<NextResponse<Service> | null> {
-    const { searchParams } = new URL(request.url);
-    const id = searchParams.get("id");
-    const services = await getServiceById(id ? id : "0534534");
-    if (services) {
-        return NextResponse.json(services);
-    } else {
-        return null;
+): Promise<NextResponse<Service | { error: string }>> {
+    try {
+        const { searchParams } = new URL(request.url);
+        const id = searchParams.get("id");
+        
+        if (!id) {
+            return NextResponse.json(
+                { error: "ID parameter is required" },
+                { status: 400 }
+            );
+        }
+
+        const service = await getServiceById(id);
+        
+        if (!service) {
+            return NextResponse.json(
+                { error: "Service not found" },
+                { status: 404 }
+            );
+        }
+
+        return NextResponse.json(service);
+    } catch (error) {
+        return NextResponse.json(
+            { error: "Internal server error" },
+            { status: 500 }
+        );
     }
 }
