@@ -44,14 +44,22 @@ body,
     display: flex;
     flex-direction: column;
     z-index: 1;
+    background-color: $color-black;
 }
 main {
+    &:hover{
+        animation: spin 4.5s infinite;
+    }
     min-height: 280px;
     flex-grow: 1;
     position: relative;
-    background-color: $color-black;
+    
 }
-
+*{
+    &:hover{
+        animation: spin 4.5s infinite;
+    }
+}
 .container {
     max-width: 1488px;
     padding: 0 72px;
@@ -71,4 +79,15 @@ img {
         left: 0;
         right: 0;
     }
+}
+
+
+@keyframes spin {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	0% {
+		transform: rotateZ(360deg);
+	}
 }
