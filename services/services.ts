@@ -8,7 +8,7 @@ export function getAllServices() {
 export function getServiceById(id: string) {
     return prisma.service.findUnique({
         where: {
-            id: id.toString()
+            id: id
         },
         
     });

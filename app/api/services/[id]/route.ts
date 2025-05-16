@@ -6,8 +6,8 @@ export async function GET(
     request: Request
 ): Promise<NextResponse<Service | { error: string }>> {
     try {
-        const url:string = request.url;
-        const id =url.split('/').at(-1)
+        const url = request.url;
+        const id = url.split('/').at(-1)
         console.log(id,request)
         if (!id) {
             return NextResponse.json(
