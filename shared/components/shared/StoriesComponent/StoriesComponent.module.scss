@@ -1,0 +1,66 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+.inner {
+    margin: 50px 0;
+    margin-bottom: 0;
+}
+.list {
+    display: flex;justify-content: space-evenly;
+ 
+    gap: 20px;
+    overflow: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+}
+.storyButton {
+    cursor: pointer;
+    width: 140px;
+    height: 140px;
+    border-radius: 1000px;
+    overflow: hidden;
+    object-fit: fill;
+    position: relative;
+    display: flex;
+    border: 2px solid $color-white;
+    justify-content: center;
+    
+    align-items: center;
+}
+.Bgimg {
+    width: 90%;
+    border-radius: 1000px;
+    height: 90%;
+    object-fit: fill;
+    z-index: 1;
+}
+.storyTitle {
+    position: absolute;
+    z-index: 2;
+    font-family: var(--font-montserrat);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 115%;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    color: $color-white;
+    width: fit-content;
+    height: fit-content;
+}
