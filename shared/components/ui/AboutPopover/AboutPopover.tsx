@@ -16,10 +16,6 @@ const array = [
         href: "/requisites",
     },
     {
-        title: "Лицензия",
-        href: "/license",
-    },
-    {
         title: "Адреса",
         href: "/addresses",
     },

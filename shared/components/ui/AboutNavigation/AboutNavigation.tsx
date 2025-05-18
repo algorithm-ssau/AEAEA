@@ -10,18 +10,18 @@ const aboutNavigationArray = [
         title: AboutNavigations.ADDRESSES,
         href: `/${AboutNavigationsSlugs.ADDRESSES}`,
     },
-    {
-        title: AboutNavigations.STAFF,
-        href: `/${AboutNavigationsSlugs.STAFF}`,
-    },
+    // {
+    //     title: AboutNavigations.STAFF,
+    //     href: `/${AboutNavigationsSlugs.STAFF}`,
+    // },
     {
         title: AboutNavigations.SHOPS,
         href: `/${AboutNavigationsSlugs.SHOPS}`,
     },
-    {
-        title: AboutNavigations.LICENSE,
-        href: `/${AboutNavigationsSlugs.LICENSE}`,
-    },
+    // {
+    //     title: AboutNavigations.LICENSE,
+    //     href: `/${AboutNavigationsSlugs.LICENSE}`,
+    // },
     {
         title: AboutNavigations.REQUISITES,
         href: `/${AboutNavigationsSlugs.REQUISITES}`,
