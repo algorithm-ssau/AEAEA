@@ -5,17 +5,12 @@ import Image from "next/image";
 
 import logo from "@/public/images/logo.svg";
 import { useState } from "react";
-import { ModalContacts } from "../ModalContacts";
 import { AboutPopover } from "../../ui/AboutPopover";
 
 const Header: React.FC = () => {
-    const [open, setOpen] = useState<boolean>(false);
     //Якорный элемент для поповера О КОМПАНИИ
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
-    const handleOpenModal = () => {
-        setOpen(true);
-    };
     const handleClickAboutButton = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
       };
@@ -35,15 +30,14 @@ const Header: React.FC = () => {
                     <Link href={"/"}>
                         <Image width={103} height={64} alt="logo" src={logo} />
                     </Link>
-                    <button
+                    <Link
                         className={styles.contacts}
-                        onClick={handleOpenModal}
+                        href={'/addresses'}
                     >
                         КОНТАКТЫ
-                    </button>
+                    </Link>
                 </div>
             </div>
-            <ModalContacts open={open} setOpen={setOpen} />
         </header>
     );
 };
