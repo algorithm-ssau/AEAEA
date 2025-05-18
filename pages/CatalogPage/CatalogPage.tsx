@@ -16,7 +16,7 @@ export default  function CatalogPage ({ services, events }:Props) {
         <>
             <BreadCrumbs breadCrumbsArray={[{ title: "Услуги" }]} />
             <div className={styles.inner}>
-                <div className={styles.leftBlock}>
+                {/* <div className={styles.leftBlock}>
                     <h1 className={styles.title}>УСЛУГИ</h1>
                     <nav>
                         <ul className={styles.list}>
@@ -27,7 +27,7 @@ export default  function CatalogPage ({ services, events }:Props) {
                             ))}
                         </ul>
                     </nav>
-                </div>
+                </div> */}
                 <div className={styles.rightBlock}>
                     <EventsBlock events={events} />
                     <ServicesesList/>
