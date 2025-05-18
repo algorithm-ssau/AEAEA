@@ -9,10 +9,15 @@ import { useEffect, useState } from "react";
 interface ServicesesListProps {}
 const ServicesesList: React.FC<ServicesesListProps> = (props) => {
      const { fetchServices} = useActions();
-     const { services,servicesStatus} = useReduxStates();
+     const { services,servicesStatus,activeEvents} = useReduxStates();
+
+     
      useEffect(() => {
-        fetchServices();
-    }, []);
+        fetchServices({
+            events:activeEvents
+        });
+    }, [activeEvents]);
+
     return (
             <ul className={styles.list}>
                 {services.map((service:Service, index) => (

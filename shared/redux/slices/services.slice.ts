@@ -2,12 +2,11 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import $api from "@/http";
 import { Statuses } from "@/@types/enums";
 import { AxiosResponse } from "axios";
-import { Service } from "@prisma/client";
-
-
+import { Event, Service } from "@prisma/client";
+import createStringFromArrayOfEvents from "@/utils/createStringFromArrayOfEvents";
 
 type ServicesSliceProps = {
-    services:Service[]
+    services: Service[];
     status: Statuses;
 };
 
@@ -16,17 +15,24 @@ const initialState: ServicesSliceProps = {
     status: Statuses.LOADING,
 };
 
-export const fetchServices= createAsyncThunk("fetchServices", async () => {
-    
-    let res: AxiosResponse<Service[]> | null =
-        await $api.get<Service[]>("/services");
+export const fetchServices = createAsyncThunk(
+    "fetchServices",
+    async (params: { events: Event[] }) => {
+        const { events } = params;
+        let res: AxiosResponse<Service[]> | null = null;
+        if (events.length) {
+            res = await $api.get<Service[]>(
+                `/services?${createStringFromArrayOfEvents(events)}`
+            );
+        } else {
+            res = await $api.get<Service[]>("/services");
+        }
 
-    console.log(res.data);
-
-    return {
-        data: res.data,
-    };
-});
+        return {
+            data: res.data,
+        };
+    }
+);
 
 const servicesSlice = createSlice({
     name: "parcking",
@@ -39,15 +45,15 @@ const servicesSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(fetchServices.fulfilled, (state, action) => {
-            state.services = action.payload.data
-            state.status = Statuses.SUCCESS
+            state.services = action.payload.data;
+            state.status = Statuses.SUCCESS;
         });
-        builder.addCase(fetchServices.pending, state => {
-			state.status = Statuses.LOADING
-		})
-		builder.addCase(fetchServices.rejected, state => {
-			state.status = Statuses.ERROR
-		})
+        builder.addCase(fetchServices.pending, (state) => {
+            state.status = Statuses.LOADING;
+        });
+        builder.addCase(fetchServices.rejected, (state) => {
+            state.status = Statuses.ERROR;
+        });
     },
 });
 export const { setServicesArray } = servicesSlice.actions;

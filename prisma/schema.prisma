@@ -71,7 +71,7 @@ model Service {
   time        String?
 
   gallery Gallery[]
-  events  Event[]
+  events  ServiceEvents[]
   type    Filters[]
 
   createdAt DateTime @default(now())
@@ -90,6 +90,16 @@ model Gallery {
   serviceId String?  @db.ObjectId
 }
 
+model ServiceEvents {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  service   Service @relation(fields: [serviceId], references: [id])
+  serviceId String  @db.ObjectId
+  event     Event   @relation(fields: [eventId], references: [id])
+  eventId   String  @db.ObjectId
+
+  @@unique([serviceId, eventId]) 
+}
+
 model Event {
   id    String @id @default(auto()) @map("_id") @db.ObjectId
   title String
@@ -97,8 +107,7 @@ model Event {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  Service   Service? @relation(fields: [serviceId], references: [id])
-  serviceId String?  @db.ObjectId
+  services ServiceEvents[]
 }
 
 model Filters {
