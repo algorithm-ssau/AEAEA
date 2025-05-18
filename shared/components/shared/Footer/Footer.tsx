@@ -1,10 +1,7 @@
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 
-import vk from "@/public/images/vk.svg";
-import telegram from "@/public/images/tg.svg";
-import rutube from "@/public/images/rutube.svg";
-import Image from "next/image";
+import { SocialsBlock } from "../../ui/SocialsBlock";
 const Footer: React.FC = () => {
     const services = [
         { title: "Фейерверки" },
@@ -82,32 +79,7 @@ const Footer: React.FC = () => {
                                 className={`${styles.element} ${styles.shop_link}`}
                                 key={5}
                             >
-                                <div className={styles.socials_block}>
-                                    <Link href={''}>
-                                        <Image
-                                            width={30}
-                                            height={30}
-                                            alt="logo"
-                                            src={telegram}
-                                        />
-                                    </Link>
-                                    <Link href={''}>
-                                        <Image
-                                            width={30}
-                                            height={30}
-                                            alt="logo"
-                                            src={rutube}
-                                        />
-                                    </Link>
-                                    <Link href={''}>
-                                        <Image
-                                            width={30}
-                                            height={30}
-                                            alt="logo"
-                                            src={vk}
-                                        />
-                                    </Link>
-                                </div>
+                                <SocialsBlock/>
                             </li>
                         </ul>
                     </nav>

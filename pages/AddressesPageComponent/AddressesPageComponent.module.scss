@@ -1,0 +1,80 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.inner {
+    max-width: 1000px;
+    width: 100%;
+}
+.title {
+    font-family: var(--font-alumni);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 80%;
+    display: flex;
+    align-items: center;
+
+    color: $color-white;
+}
+.secondBlock{
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+}
+.text {
+    font-family: var(--font-montserrat);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 110%;
+    max-width: 360px;
+    color: $color-white;
+}
+.contact {
+    border: 1px solid $color-white;
+    max-width: 300px;
+    height: 60px;
+    width: 100%;
+    font-family: var(--font-alumni);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    color: $color-white;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: $color-black;
+    height: 100%;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.time {
+    font-family: var(--font-montserrat);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: $color-white;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.tel {
+    font-family: var(--font-montserrat);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: $color-white;
+}
+.item{
+    margin: 20px 0;
+}

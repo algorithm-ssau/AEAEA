@@ -1,0 +1,1 @@
+export {SocialsBlock} from './SocialsBlock'

@@ -1,0 +1,27 @@
+@import "@/scss/base/mixins";
+@import "@/scss/base/vars";
+.input {
+    width: 100%;
+
+    font-family: var(--font-montserrat);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 110%;
+    &::placeholder {
+        font-family: var(--font-montserrat);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: $color-white;
+        line-height: 110%;
+    }
+    color: $color-white;
+    width: 100%;
+}
+
+.block {
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $color-white;
+}
