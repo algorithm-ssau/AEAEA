@@ -1,14 +1,8 @@
 import { getAllEvents } from "@/services/events";
+import { Event } from "@prisma/client";
 import { NextResponse } from "next/server";
 
-type Events = {
-    id: string;
-    title: string;
-    createdAt: Date;
-    updatedAt: Date;
-    serviceId: string | null;
-};
-export async function GET(): Promise<NextResponse<Events[]>> {
+export async function GET(): Promise<NextResponse<Event[]>> {
     const trends = await getAllEvents();
     return NextResponse.json(trends);
 }
