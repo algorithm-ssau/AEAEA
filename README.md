@@ -4,6 +4,9 @@
 
 **Веб-каталог "Волжские салюты"** - это современное цифровое решение для презентации пиротехнической продукции, разработанное с учетом актуальных тенденций веб-разработки и маркетинговых требований.
 
+> [!NOTE]
+> Тестовый сайт находится по ссылке https://aeaea.vercel.app/
+
 ### Ключевые особенности:
 - **Комплексное представление услуг**:
   - Главная страница с акциями и преимуществами
@@ -67,7 +70,7 @@ http://localhost:3000
           <a href="https://github.com/Liza-O">@Liza-O</a>
         </div>
       </div>
-    </td>    
+    </td>
     <td valign="top" width="200px" style="height: 220px; text-align: center; padding: 15px;">
       <div style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
@@ -83,7 +86,7 @@ http://localhost:3000
           <a href="https://github.com/BurenovaAnna6302">@BurenovaAnna6302</a>
         </div>
       </div>
-    </td>    
+    </td>
     <td valign="top" width="200px" style="height: 220px; text-align: center; padding: 15px;">
       <div style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
@@ -115,7 +118,7 @@ http://localhost:3000
           <a href="https://github.com/PIRSON21">@PIRSON21</a>
         </div>
       </div>
-    </td>    
+    </td>
     <td valign="top" width="200px" style="height: 220px; text-align: center; padding: 15px;">
       <div style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
@@ -137,10 +140,10 @@ http://localhost:3000
 
 <div align="center" style="margin: 20px 0;">
 <br/>
-  
+
 #### Основные технологии
 <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" height="25" title="Основной язык"/>
-<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white" height="25" title="UI библиотека"/> 
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white" height="25" title="UI библиотека"/>
 <img src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white" height="25" title="Фреймворк"/>
 <img src="https://img.shields.io/badge/DeepSeek-1F8BED?logo=deepseek&logoColor=white" height="25" title="AI-ассистент"/>
 
